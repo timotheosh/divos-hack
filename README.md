@@ -15,3 +15,8 @@ DIR="/home/thawes/.steam/steam/steamapps/common/Divinity Original Sin Enhanced E
 PRIMUS_libGL=/usr/lib/x86_64-linux-gnu/libGL.so.1 LD_PRELOAD=divos-hack.so LD_LIBRARY_PATH="${DIR}" primusrun "${DIR}"/EoCApp
 ```
 I also noticed that this shim made it possible to play the game on the normal Intel card as well. I am wondering if a similar shim will appear for Nvidia cards, where I might get back better performance... time will tell.
+
+Compile with
+```
+gcc -s -O2 -shared -fPIC -o divos-hack.{so,c} -ldl
+```
